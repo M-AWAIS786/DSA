@@ -1,21 +1,28 @@
-// ! two pointer squares array
 
-void main() {
-  Solution a = Solution();
-  print(a.rotateString("abcde", "cdeab"));
-}
 
-class Solution {
-  bool rotateString(String s, String goal) {
-    List<String> s = [];
-    List<String> goal = [];
 
-    for (int i = 0; i < s.length; i++) {
-      // s.add(s.substring());
-    }
-    return true;
-  }
-}
+
+// // ! two pointer squares array
+
+// void main() {
+//   Solution a = Solution();
+//   print(a.rotateString("abcde", "cdeab"));
+// }
+
+// class Solution {
+//   bool rotateString(String s, String goal) {
+//     if (s.length != goal.length) {
+//       return false;
+//     }
+//     if (s == goal) {
+//       return true;
+//     }
+
+//     String concat = s + s;
+//     return concat.contains(goal);
+//   }
+// }
+
 // class Solution {
 //   List<int> sortedSquares(List<int> nums) {
 //     List<int> sorte = [];
