@@ -1,7 +1,61 @@
+// ! two pointer squares array
 
+void main() {
+  Solution a = Solution();
+  print(a.rotateString("abcde", "cdeab"));
+}
 
+class Solution {
+  bool rotateString(String s, String goal) {
+    List<String> s = [];
+    List<String> goal = [];
 
+    for (int i = 0; i < s.length; i++) {
+      // s.add(s.substring());
+    }
+    return true;
+  }
+}
+// class Solution {
+//   List<int> sortedSquares(List<int> nums) {
+//     List<int> sorte = [];
+//     for (int i = 0; i < nums.length; i++) {
+//       int temp = nums[i] * nums[i];
+//       sorte.add(temp);
+//     }
+//     sorte.sort();
+//     return sorte;
+//   }
+// }
 
+// ! Two Pointer approach Buy and sell stock.
+// Input: prices = [7,1,5,3,6,4]
+// Output: 5
+// Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+// Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+
+// import 'dart:math';
+
+// void main() {
+//   Solution a = Solution();
+//   print(a.maxProfit([7, 6, 4, 3, 1]));
+// }
+
+// class Solution {
+//   int maxProfit(List<int> prices) {
+//     int l = 0, r = 1;
+//     int maax = 0;
+//     while (r < prices.length) {
+//       if (prices[l] < prices[r]) {
+//         maax = max(maax, prices[r] - prices[l]);
+//       } else {
+//         l = r;
+//       }
+//       r++;
+//     }
+//     return maax;
+//   }
+// }
 
 
 
