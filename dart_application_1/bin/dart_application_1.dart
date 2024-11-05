@@ -1,3 +1,25 @@
+// ! intersection of two list
+// class Solution {
+//   List<int> intersection(List<int> nums1, List<int> nums2) {
+//     Set<int> number1 = nums1.toSet();
+//     Set<int> number2 = nums2.toSet();
+
+//     return number1.intersection(number2).toList();
+//   }
+// }
+
+void main() {
+  Solution s = Solution();
+  print(s.intersection([1, 2, 2, 1], [2, 2]));
+}
+
+
+
+
+
+
+
+
 
 // class Solution {
 //   int minChanges(String s) {
