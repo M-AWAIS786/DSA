@@ -1,4 +1,42 @@
 
+// class Solution {
+//   int minChanges(String s) {
+//     int count = 0;
+
+//     for (int i = 0; i < s.length; i += 2) {
+//       if (s[i] != s[i + 1]) {
+//         count++;
+//       }
+//     }
+//     return count;
+//   }
+// }
+
+
+// ! circular sentence
+// class Solution {
+//   bool isCircularSentence(String sentence) {
+//     List<String> splitChar = sentence.split(' ');
+
+//     for (int i = 0; i < splitChar.length - 1; i++) {
+//       if (splitChar[i].isEmpty || splitChar[i + 1].isEmpty) {
+//         return false;
+//       }
+//       if (splitChar[i].substring(splitChar[i].length - 1) !=
+//           splitChar[i + 1].substring(0, 1)) {
+//         return false;
+//       }
+//     }
+
+//     if (splitChar.last.substring(splitChar.last.length - 1) !=
+//         splitChar.first.substring(0, 1)) {
+//       return false;
+//     }
+
+    
+//     return true;
+//   }
+// }
 
 
 
