@@ -8,9 +8,46 @@
 //   }
 // }
 
+//! find if array can be sorted
+class Solution {
+  int countSetBits(int num) {
+    return num.toRadixString(2).replaceAll('0', '').length;
+  }
+
+  bool canBeSorted(List<int> nums) {
+    // Step 1: Group elements by their set bit counts
+    Map<int, List<int>> groups = {};
+    for (var num in nums) {
+      int bits = countSetBits(num);
+      groups.putIfAbsent(bits, () => []).add(num);
+    }
+
+    // Step 2: Sort each group individually
+    for (var group in groups.values) {
+      group.sort();
+    }
+
+    // Step 3: Construct a flattened sorted version from groups
+    List<int> sortedByGroups = [];
+    for (var num in nums) {
+      int bits = countSetBits(num);
+      sortedByGroups.add(groups[bits]!.removeAt(0)); // Pop in sorted order
+    }
+
+    // Step 4: Check if the grouped sorted matches fully sorted array
+    List<int> sortedNums = List.from(nums)..sort();
+    return sortedByGroups.toString() == sortedNums.toString();
+  }
+}
+
 void main() {
   Solution s = Solution();
-  print(s.intersection([1, 2, 2, 1], [2, 2]));
+  print(s.canBeSorted([8, 4, 2, 30, 15]));
+  List<int> nums2 = [1, 2, 3, 4, 5];
+  print(s.canBeSorted(nums2)); // true
+
+  List<int> nums3 = [3, 16, 8, 4, 2];
+  print(s.canBeSorted(nums3)); // false
 }
 
 
