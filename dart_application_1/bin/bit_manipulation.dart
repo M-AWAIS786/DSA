@@ -74,23 +74,48 @@ import 'dart:math';
 //   }
 // }
 
+// class Solution {
+//   int findMaxConsecutiveOnes(List<int> nums) {
+//     int consCount = 0;
+//     int prevCount = 0;
+//     for (int i = 0; i < nums.length; i++) {
+//       if (nums[i] == 1) {
+//         consCount++;
+//         if (consCount > prevCount) prevCount = consCount;
+//       } else if (nums[i] == 0) {
+//         consCount = 0;
+//       }
+//     }
+//     return prevCount;
+//   }
+// }
+
+// class Solution {
+//   List<int> runningSum(List<int> nums) {
+//     List<int> result = [];
+//     int sum = 0;
+//     for (int i = 0; i < nums.length; i++) {
+//       sum += nums[i];
+
+//       result.add(sum);
+//     }
+//     return result;
+//   }
+// }
+
 class Solution {
-  int findMaxConsecutiveOnes(List<int> nums) {
-    int consCount = 0;
-    int prevCount = 0;
-    for (int i = 0; i < nums.length; i++) {
-      if (nums[i] == 1) {
-        consCount++;
-        if (consCount > prevCount) prevCount = consCount;
-      } else if (nums[i] == 0) {
-        consCount = 0;
-      }
+  int largestAltitude(List<int> gain) {
+    int maxVal = 0;
+    int alt = 0;
+    for (int i = 0; i < gain.length; i++) {
+      alt += gain[i];
+      maxVal = max(maxVal, alt);
     }
-    return prevCount;
+    return maxVal;
   }
 }
 
 void main() {
   Solution s = Solution();
-  print(s.findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1]));
+  print(s.largestAltitude([-5, 1, 5, 0, -7]));
 }
